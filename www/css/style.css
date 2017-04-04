@@ -1,0 +1,33 @@
+/* Empty. Add your own CSS if you like */
+.home-panel{
+  padding: 5%;
+  background-color: #11281d;
+}
+.button-home{
+  margin-left: 5%;
+}
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
+.logo{
+  text-align:center;
+  font-family: 'unimed_sanssemibold';
+  color: #33cd5f;
+
+}
+#botao-home-id{
+  border-radius: 15px;
+}
+
+@font-face {
+    font-family: 'unimed_sanssemibold';
+    src: url('../fonts/unimedsans-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/unimedsans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
