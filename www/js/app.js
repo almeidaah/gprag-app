@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+var gprag = angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,22 +23,51 @@ angular.module('starter', ['ionic'])
   });
 })
 
-/*
+
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
+  $urlRouterProvider.otherwise('/home');
+
   $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'templates/home.html',
+      controller: 'homeCtrl',
+      controllerAs: 'ctrl'
+    })
+    .state('cadastro/cliente', {
+      url: '/cadastro/cliente',
+      templateUrl: 'templates/cadastro-cliente.html',
+      controller: 'clienteCtrl',
+      controllerAs: 'ctrl'
+    })
+    .state('cadastro/trabalho', {
+      url: '/cadastro/trabalho',
+      templateUrl: 'templates/cadastro-trabalho.html',
+      controller: 'clienteCtrl',
+      controllerAs: 'ctrl'
+    })
+    .state('buscar/cliente', {
+      url: '/buscar/cliente',
+      templateUrl: 'templates/buscar-cliente.html',
+      controller: 'buscarClienteCtrl',
+      controllerAs: 'ctrl'
+    })
+    .state('avisos', {
+      url: '/avisos',
+      templateUrl: 'templates/avisos.html',
+      controller: 'avisosCtrl',
+      controllerAs: 'ctrl'
+    })
+    .state('sobre', {
+      url: '/sobre',
+      templateUrl: 'templates/sobre.html',
+      controller: 'avisosCtrl',
+      controllerAs: 'ctrl'
+    });
+});
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
-
+/*
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -51,25 +80,6 @@ angular.module('starter', ['ionic'])
     }
   })
 
-  .state('tab.training', {
-      url: '/training',
-      views: {
-        'tab-training': {
-          templateUrl: 'templates/tab-training.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.traning-detail', {
-      url: '/training-detail/:chatId',
-      views: {
-        'tab-training': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
   .state('tab.achievements', {
     url: '/achievements',
     views: {
@@ -81,7 +91,6 @@ angular.module('starter', ['ionic'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/login');
 
 });
 */
