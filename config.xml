@@ -2,13 +2,14 @@
 <widget id="com.ionicframework.gpragapp146982" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>G-prag</name>
   <description>
-        An Ionic Framework and Cordova project.
+        G-prag Detetização - Aplicativo Oficial
     </description>
-  <author email="you@example.com" href="http://example.com/">
-      Your Name Here
+  <author email="almeidascvn@gmail.com" href="http://fernandoalmeida.esy.es/">
+      Fernando Almeida
     </author>
   <content src="index.html"/>
   <access origin="*"/>
+  <preference name="Orientation" value="portrait" />
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
