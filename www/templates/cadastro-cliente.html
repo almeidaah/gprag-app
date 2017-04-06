@@ -1,7 +1,55 @@
+<link rel="stylesheet" type="text/css" href="css/cadastroCliente.css" />
+
 <ion-pane class="gprag-panel">
+  <ion-content class="content-cadastro-cliente">
+
   <header>
     <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.voltar()" >
       <b>Voltar</b>
     </button>
   </header>
+
+  <form ng-submit="ctrl.cadastrarCliente(ctrl.cliente)" class="form-login" name="form" novalidate>
+
+    <label class="item login-input input-center">
+        Cadastro de clientes
+    </label>
+
+    <label class="item login-input">
+        Nome do cliente
+        <input type="email" class="input" placeholder="João da Silva" ng-model="ctrl.cliente.nome">
+    </label>
+
+    <label class="item login-input">
+        Endereço
+        <input type="text" class="input" placeholder="Rua das gaivotas, 123" ng-model="ctrl.cliente.endereco">
+    </label>
+
+    <label class="item login-input">
+        Telefone
+        <input type="number" class="input" placeholder="99-99999-9999" ng-model="ctrl.cliente.telefone">
+    </label>
+
+    <label class="item login-input">
+        E-mail
+        <input type="email" class="input" placeholder="teste@gmail.com" ng-model="ctrl.cliente.email">
+    </label>
+
+    <label class="item login-input">
+      Estado:
+      <input type="radio" name="cliente.status" ng-model="ctrl.cliente.status" value="Ativo" ng-value="A">Ativo</input>
+      <input type="radio" name="cliente.status" ng-model="ctrl.cliente.status" value="Ativo" ng-value="I">Inativo</input>
+    </label>
+    <label class="item login-input " id="periodo-necessidade">
+      Período Necessidade até :
+      <p>
+      <input type="date" id="periodo-necessidade-picker" ng-model="ctrl.cliente.periodoNecessidade" />
+      </p>
+    </label>
+
+    <button class="button button-block button-calm" >
+      <b>Cadastrar</b>
+    </button>
+  </form>
+</ion-content>
 </ion-pane>
