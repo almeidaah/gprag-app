@@ -2,17 +2,18 @@
 
 <ion-pane class="gprag-panel">
   <ion-content class="content-cadastro-trabalho">
-  <header>
+  <header class="gprag-header">
     <button id="botao-voltar" class="button button-block button-balanced" ng-click="ctrl.voltar()" >
       <b>Voltar</b>
     </button>
+    <label class="item job-input input-center">
+        Cadastrar trabalho
+    </label>
   </header>
 
   <form ng-submit="ctrl.cadastrarTrabalho(ctrl.trabalho)" class="form-login" name="form" novalidate>
 
-    <label class="item job-input input-center">
-        Cadastrar novo trabalho
-    </label>
+
 
     <label class="item job-input">
          Cliente
@@ -54,6 +55,10 @@
       <input type="date" id="periodo-necessidade-picker" ng-model="ctrl.trabalho.periodoNecessidade" />
       </p>
     </label>
+
+    <button class="button button-block button-calm" >
+      <b>Cadastrar</b>
+    </button>
 
 
 

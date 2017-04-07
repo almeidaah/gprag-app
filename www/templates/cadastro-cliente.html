@@ -3,21 +3,21 @@
 <ion-pane class="gprag-panel">
   <ion-content class="content-cadastro-cliente">
 
-  <header>
+  <header class="gprag-header">
     <button id="botao-voltar" class="button button-block button-balanced" ng-click="ctrl.voltar()" >
       <b>Voltar</b>
     </button>
-  </header>
-
-  <form ng-submit="ctrl.cadastrarCliente(ctrl.cliente)" class="form-login" name="form" novalidate>
-
     <label class="item login-input input-center">
         Cadastro de clientes
     </label>
 
+  </header>
+
+  <form ng-submit="ctrl.cadastrarCliente(ctrl.cliente)" class="form-login" name="form">
+
     <label class="item login-input">
         Nome do cliente
-        <input type="email" class="input" placeholder="João da Silva" ng-model="ctrl.cliente.nome">
+        <input type="text" class="input" placeholder="João da Silva" ng-model="ctrl.cliente.nome" required>
     </label>
 
     <label class="item login-input">
@@ -43,7 +43,7 @@
     <label class="item login-input " id="periodo-necessidade">
       Período Necessidade até :
       <p>
-      <input type="date" id="periodo-necessidade-picker" ng-model="ctrl.cliente.periodoNecessidade" />
+      <input type="date" id="periodo-necessidade-picker" ng-model="ctrl.cliente.periodoNecessidade"/>
       </p>
     </label>
 

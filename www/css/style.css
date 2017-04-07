@@ -26,3 +26,15 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
+/*Botão voltar em todo o sistema*/
+#botao-voltar{
+  border-radius: 10px;
+  width: 30%;
+  margin-right: 5%;
+}
+
+.gprag-header{
+  display: flex;
+  align-items: center;
+}
