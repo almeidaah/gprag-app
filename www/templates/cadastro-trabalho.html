@@ -1,7 +1,64 @@
+<link rel="stylesheet" type="text/css" href="css/cadastroTrabalho.css" />
+
 <ion-pane class="gprag-panel">
+  <ion-content class="content-cadastro-trabalho">
   <header>
-    <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.voltar()" >
+    <button id="botao-voltar" class="button button-block button-balanced" ng-click="ctrl.voltar()" >
       <b>Voltar</b>
     </button>
   </header>
+
+  <form ng-submit="ctrl.cadastrarTrabalho(ctrl.trabalho)" class="form-login" name="form" novalidate>
+
+    <label class="item job-input input-center">
+        Cadastrar novo trabalho
+    </label>
+
+    <label class="item job-input">
+         Cliente
+      <select class="job-input item-select client-select">
+         <option>Igreja dos Ingleses 1</option>
+         <option selected>Rest. Amarildo</option>
+         <option>Capela Ratones</option>
+      </select>
+   </label>
+
+    <label class="item job-input ">
+        Trabalho Realizado:
+        <ion-list class="list-checkbox">
+          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DTT">DTT</ion-checkbox>
+          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DCP">DCP</ion-checkbox>
+          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DRT">DRT</ion-checkbox>
+          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.LCA">LCA</ion-checkbox>
+        </ion-list>
+    </label>
+
+    <label class="item job-input">
+        Valor
+        <input type="number" class="input" ng-model="ctrl.trabalho.valorTotal">
+    </label>
+
+    <label class="item job-input">
+        Representante
+        <input type="text" class="input" ng-model="ctrl.cliente.representante">
+    </label>
+
+    <label class="item job-input">
+        Aplicador
+        <input type="text" class="input" ng-model="ctrl.cliente.aplicador">
+    </label>
+
+    <label class="item job-input " id="periodo-necessidade">
+      Período Necessidade até :
+      <p>
+      <input type="date" id="periodo-necessidade-picker" ng-model="ctrl.trabalho.periodoNecessidade" />
+      </p>
+    </label>
+
+
+
+
+
+  </form>
+</ion-content>
 </ion-pane>

@@ -58,12 +58,6 @@ var gprag = angular.module('starter', ['ionic'])
       templateUrl: 'templates/avisos.html',
       controller: 'avisosCtrl',
       controllerAs: 'ctrl'
-    })
-    .state('sobre', {
-      url: '/sobre',
-      templateUrl: 'templates/sobre.html',
-      controller: 'avisosCtrl',
-      controllerAs: 'ctrl'
     });
 });
 

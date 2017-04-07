@@ -4,7 +4,7 @@ gprag.controller('trabalhoCtrl', function($window, $state) {
 
     var ctrl = this;
 
-    ctrl.cadastrar = function(){
+    ctrl.cadastrarTrabalho = function(ctrl.trabalho){
     }
 
     ctrl.voltar = function(){
