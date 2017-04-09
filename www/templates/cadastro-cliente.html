@@ -17,7 +17,7 @@
 
     <label class="item login-input">
         Nome do cliente
-        <input type="text" class="input" placeholder="João da Silva" ng-model="ctrl.cliente.nome" required>
+        <input type="text" class="input" placeholder="João da Silva" ng-model="ctrl.cliente.nome">
     </label>
 
     <label class="item login-input">
@@ -36,9 +36,11 @@
     </label>
 
     <label class="item login-input">
-      Estado:
-      <input type="radio" name="cliente.status" ng-model="ctrl.cliente.status" value="Ativo" ng-value="A">Ativo</input>
+      Ativo?
+      <ion-toggle ng-model="ctrl.cliente.status" class="client-toggle" toggle-class="toggle-calm" ng-model="ctrl.cliente.status" />
+      <!--<input type="radio" name="cliente.status" ng-model="ctrl.cliente.status" value="Ativo" ng-value="A">Ativo</input>
       <input type="radio" name="cliente.status" ng-model="ctrl.cliente.status" value="Ativo" ng-value="I">Inativo</input>
+    -->
     </label>
     <label class="item login-input " id="periodo-necessidade">
       Período Necessidade até :

@@ -4,8 +4,7 @@ gprag.controller('trabalhoCtrl', function($window, $state) {
 
     var ctrl = this;
     ctrl.trabalho = {};
-    ctrl.trabalho.periodoNecessidade=new Date();
-
+    ctrl.trabalho.periodoNecessidade=new Date('2030', '00', '01');
 
     ctrl.cadastrarTrabalho = function(){
     }

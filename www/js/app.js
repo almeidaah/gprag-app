@@ -41,6 +41,12 @@ var gprag = angular.module('starter', ['ionic'])
       controller: 'clienteCtrl',
       controllerAs: 'ctrl'
     })
+    .state('cliente-sucesso', {
+      url: '/cliente/sucesso',
+      templateUrl: 'templates/cliente-sucesso.html',
+      controller: 'clienteCtrl',
+      controllerAs: 'ctrl'
+    })
     .state('cadastro/trabalho', {
       url: '/cadastro/trabalho',
       templateUrl: 'templates/cadastro-trabalho.html',

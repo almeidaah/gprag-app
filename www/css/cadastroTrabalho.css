@@ -17,11 +17,12 @@
   font-size: 1.0em;
   color: #33cd5f;
 }
-.client-checkbox{
+.job-checkbox{
   background: none;
   border: none;
   color: white;  font-weight: bold;
-  display: block
+  display: block;
+  padding: 5px 0 5px 50px;
 }
 .job-input .input{
   background:none;

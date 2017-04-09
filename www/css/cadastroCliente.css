@@ -14,12 +14,20 @@
   background:none;
   color: #FFF;
   font-size: 0.8em;
+  width: 100%;
 }
 
 .input-center{
   text-align: center;
   color: white;
   border: none;
+}
+
+.client-toggle{
+  background: none;
+  border: none;
+  color: white;  font-weight: bold;
+  display: list-item;
 }
 
 #periodo-necessidade, #periodo-necessidade-picker{

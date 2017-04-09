@@ -13,8 +13,6 @@
 
   <form ng-submit="ctrl.cadastrarTrabalho(ctrl.trabalho)" class="form-login" name="form" novalidate>
 
-
-
     <label class="item job-input">
          Cliente
       <select class="job-input item-select client-select">
@@ -27,10 +25,10 @@
     <label class="item job-input ">
         Trabalho Realizado:
         <ion-list class="list-checkbox">
-          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DTT">DTT</ion-checkbox>
-          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DCP">DCP</ion-checkbox>
-          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DRT">DRT</ion-checkbox>
-          <ion-checkbox class="client-checkbox" ng-model="ctrl.trabalho.tipotrabalho.LCA">LCA</ion-checkbox>
+          <ion-checkbox class="job-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DTT">DTT</ion-checkbox>
+          <ion-checkbox class="job-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DCP">DCP</ion-checkbox>
+          <ion-checkbox class="job-checkbox" ng-model="ctrl.trabalho.tipotrabalho.DRT">DRT</ion-checkbox>
+          <ion-checkbox class="job-checkbox" ng-model="ctrl.trabalho.tipotrabalho.LCA">LCA</ion-checkbox>
         </ion-list>
     </label>
 
