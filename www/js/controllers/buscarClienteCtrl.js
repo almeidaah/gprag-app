@@ -20,28 +20,39 @@ gprag.controller('buscarClienteCtrl', function($window, $state, $rootScope, $ion
        });
     }
 
-    ctrl.listClients = clienteService.findAll()
-    .success(function(response){
-      ctrl.listClients = response;
-    })
-    .error(function(error){
-      ctrl.msgErro = "Não foi possível buscar a lista de clientes. Tente novamente em alguns minutos.";
-    })
+    findAllClients();
+
+    function findAllClients(){
+      ctrl.listClients = clienteService.findAll()
+      .success(function(response){
+        ctrl.listClients = response;
+      })
+      .error(function(error){
+        ctrl.msgErro = "Não foi possível buscar a lista de clientes. Tente novamente em alguns minutos.";
+      })
+    }
 
     ctrl.voltar = function(){
       $state.go("home");
     }
 
     ctrl.buscarCliente = function(){
-      clienteService.findByName(ctrl.nmCliente)
-      .success(function(response){
-        ctrl.listClients = response;
-        ctrl.msgErro="";
-        ctrl.msgSucesso="";
-      })
-      .error(function(error){
-        ctrl.msgErro = "O serviço está indisponível no momento, tente em alguns minutos ou informe o administrador do sistema.";
-      });
+
+      if(!ctrl.nmCliente ){
+        findAllClients();
+      }else{
+        if(ctrl.nmCliente.length >= 3){
+          clienteService.findByName(ctrl.nmCliente)
+          .success(function(response){
+            ctrl.listClients = response;
+            ctrl.msgErro="";
+            ctrl.msgSucesso="";
+          })
+          .error(function(error){
+            ctrl.msgErro = "O serviço está indisponível no momento, tente em alguns minutos ou informe o administrador do sistema.";
+          });
+        }
+     }
     };
 
     ctrl.editarCliente = function(clienteEdit){
@@ -61,6 +72,7 @@ gprag.controller('buscarClienteCtrl', function($window, $state, $rootScope, $ion
                 ctrl.msgSucesso = "Cliente removido com sucesso";
                 ctrl.nmCliente = "";
                 ctrl.listClients = {};
+                findAllClients();
               })
               .error(function(error){
                 console.error(error);

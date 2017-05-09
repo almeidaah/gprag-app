@@ -21,7 +21,7 @@
   <div ng-show="ctrl.msgErro == ''">
     <label class="item search-input">
         Buscar Cliente:
-      <input type="text" class="input" name="nome" id="nomeCliente" ng-change="ctrl.buscarCliente(this)" ng-model="ctrl.nmCliente" autofocus="true" required >
+      <input type="text" class="input" placeholder="Digite ao menos 3 letras" id="nomeCliente" ng-change="ctrl.buscarCliente(this)" ng-model="ctrl.nmCliente" autofocus="true" required >
     </label>
 
     <ul id="listagem-clientes">
