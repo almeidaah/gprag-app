@@ -3,28 +3,30 @@
 
 <ion-pane class="home-panel">
 
+    <check-internet></check-internet>
+
     <header class="topo">
-      <img src="img/ionic.png" width="150" height="150" class="center-block img-center" />
-      <h3 class="logo">G-Prag 1.0</h3>
+      <img src="img/ionic.png" width="250" height="250" class="center-block img-center" />
+      <!--<h3 class="logo">G-Prag 1.0</h3>-->
     </header>
 
     <span class="button-home">
-      <button id="botao-home-id" class="button button-block button-assertive" ng-click="ctrl.listarAvisos()" >
-          <b>AVISOS (12)</b>
+      <button id="botao-home-id" class="button button-block button-assertive" ng-click="ctrl.listarAvisos()" ng-disabled="semConexao" >
+          <b>AVISOS (X)</b>
       </button>
     </span>
     <span class="button-home">
-      <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.novoCadastroCliente()" >
+      <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.novoCadastroCliente()" ng-disabled="semConexao">
         <b>Cadastrar novo cliente</b>
       </button>
     </span>
     <span class="button-home">
-      <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.novoCadastroTrabalho()" >
+      <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.novoCadastroTrabalho()" ng-disabled="semConexao" >
         <b>Cadastrar novo trabalho</b>
       </button>
     </span>
     <span class="button-home">
-      <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.buscarCliente()" >
+      <button id="botao-home-id" class="button button-block button-balanced" ng-click="ctrl.buscarCliente()" ng-disabled="semConexao" >
         <b>Buscar Cliente</b>
       </button>
     </span>

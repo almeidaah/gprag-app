@@ -1,0 +1,17 @@
+Requisitos do aviso:
+
+1 - Um aviso vai aparecer 1 (uma) semana antes de vencer o periodoNecessidade do cliente
+O aviso será: O cliente X irá vencer em (X) dias
+
+O aviso irá continuar mostrando os dias que o cliente foi vencido
+O aviso será O Cliente X venceu há (x) dias
+
+2 - Para aviso de cliente a vencer, mostrar um botão de postergar por mais 6 meses ou 1 ano
+2.1 - E tambem permitir a escolha da data futura.
+
+3 - Dividir os clientes em : Clientes a Vencer e Clientes Já Vencidos
+3.1 - Clientes a vencer, ordem do mais próximo para o mais distante (1.. 3.. 6..7);
+3.1 - Clientes já vencidos: do vencido mais atualmente para o mais distante
+
+
+4 - Colocar a edição/ os trabalhos e a exclusão na listagem de clientes dos avisos

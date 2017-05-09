@@ -1,0 +1,17 @@
+.center-topo{
+  text-align: center;
+  color: white;
+  border: none;
+  background: none;
+}
+
+#periodo-necessidade, #periodo-necessidade-picker{
+  background: gray;
+  color: white;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.span-required{
+  color: yellow;
+}
