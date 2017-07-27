@@ -6,11 +6,11 @@ gpragDirectives.directive("checkInternet", function($interval){
         restrict: "E",
         controller: function ($scope, $element, $attrs, $interval) {
             $interval(function () {
-                if (navigator.network.connection.type === Connection.NONE) {
-                    $scope.semConexao = true;
-                    $scope.mensagemErro = "Sem conexão com a internet";
-                    return;
-                }
+                // if (navigator.network.connection.type === Connection.NONE) {
+                //     $scope.semConexao = true;
+                //     $scope.mensagemErro = "Sem conexão com a internet";
+                //     return;
+                // }
                 $scope.semConexao = false;
             }, 1000);
         },
